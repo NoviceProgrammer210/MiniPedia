@@ -3,10 +3,12 @@ const axios = require('axios');
 const app = express();
 const cors = require('cors');
 
-app.use(cors());
 
+app.use(cors());
 app.get('/api/wiki/:query', async(req, res) => {
+    
     const query = req.params.query;
+    console.log(query);
     const url = `https://en.wikipedia.org/api/rest_v1/page/summary/${query}`;
     
     try {
