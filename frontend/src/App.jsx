@@ -1,16 +1,13 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import axios from  'axios';
 
 function Wiki() {
   const [word, setword] = useState('');
   const [result, setResult] = useState(null);
- const fetch =()=>{
+ const fetch =async()=>{
   try {
-    const response = axios.get(`http://localhost:7000/api/wiki/${word}`);
-    setResult(response.data);
+    await axios.get(`http://localhost:7000/api/wiki/${word}`).then(response=>{setResult(response.data)}).catch(er=>{console.log(er)});  
 } catch (error) {
     console.error('Error fetching data', error);
 }
