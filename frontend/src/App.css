@@ -5,38 +5,91 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Set a custom background image and style the container */
+body {
+  background:url('./assets/deer.jpg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  min-height: 50vh;
+  background-color: rgba(36, 21, 21,0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 200px;
+  box-shadow: 0px 0px 20px rgba(36, 21, 21, 0.1);
+}
+
+input[type="text"] {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #ac1005;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.result h2 {
+  font-size: 24px;
+  color: #e9e8e8;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.result p {
+  font-size: 18px;
+  color: #a3a2a2;
+}
+
+.result a {
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.result a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: antiquewhite;
+  font-size: 60px;
+  opacity: 0; /* Start invisible */
+  transition: color 0.3s ease-in-out; /* Smooth transition for color */
+  animation: fadeIn 2s forwards; /* Fade in over 2 seconds */
+}
+
+h1:hover {
+  color: lightcoral; /* Change to a different color on hover */
+}
+
+@keyframes fadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1; /* End with full opacity */
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
