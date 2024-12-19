@@ -12,7 +12,7 @@ Technologies Used:
  * [Add any other specific technologies used, e.g., state management library, testing frame
 Getting Started:
  * Clone the repository:
-   git clone <repository_url> 
+   git clone https://github.com/NoviceProgrammer210/MiniPedia.git
 
  * Install dependencies:
    cd mini-pedia
