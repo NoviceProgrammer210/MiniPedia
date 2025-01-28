@@ -9,7 +9,6 @@ Technologies Used:
  * Frontend: React, JavaScript, CSS/SCSS
  * Backend: Node.js
  * API: Wikipedia API
- * [Add any other specific technologies used, e.g., state management library, testing frame
 Getting Started:
  * Clone the repository:
    git clone https://github.com/NoviceProgrammer210/MiniPedia.git
